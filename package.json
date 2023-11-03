@@ -14,7 +14,7 @@
     "image selector",
     "react"
   ],
-  "version": "0.1.0",
+  "version": "0.1.2",
   "bugs": "https://github.com/javadbat/jb-image-input-react-react/issues",
   "license": "MIT",
   "files": [
@@ -25,7 +25,7 @@
     "index.js"
   ],
   "main": "index.js",
-  "types": "./dist/react-component/jb-image-input/lib/JBImageInput.d.ts",
+  "types": "./dist/jb-image-input/lib/JBImageInput.d.ts",
   "jsnext:main":"index.js",
   "module": "index.js",
   "repository": {

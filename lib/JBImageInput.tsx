@@ -102,21 +102,21 @@ export type JBImageInputEventType<T> = T & {
     target: JBImageInputWebComponent
 }
 type JBImageInputProps = {
-    className: string,
-    placeholderTitle: string,
-    required: boolean,
-    config: JBImageInputConfig,
-    value: any,
-    uploadType: string,
-    onChange: (e:JBImageInputEventType<Event>)=>void,
-    onImageSelected: (e:JBImageInputEventType<CustomEvent>)=>void,
-    bridge: JBImageInputBridge,
-    multiple: boolean,
-    file: File,
-    acceptTypes: string,
-    maxFileSize: number,
-    onMaxSizeExceed: (e:JBImageInputEventType<Event>)=>void,
-    children:React.ReactNode
+    className?: string,
+    placeholderTitle?: string,
+    required?: boolean,
+    config?: JBImageInputConfig,
+    value?: any,
+    uploadType?: string,
+    onChange?: (e:JBImageInputEventType<Event>)=>void,
+    onImageSelected?: (e:JBImageInputEventType<CustomEvent>)=>void,
+    bridge?: JBImageInputBridge,
+    multiple?: boolean,
+    file?: File,
+    acceptTypes?: string,
+    maxFileSize?: number,
+    onMaxSizeExceed?: (e:JBImageInputEventType<Event>)=>void,
+    children?:React.ReactNode
 }
 // JBImageInput.propTypes = {
 //     className: PropTypes.string,
