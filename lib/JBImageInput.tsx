@@ -5,7 +5,7 @@ import {JBImageInputWebComponent } from 'jb-image-input';
 import {JBImageInputConfig, JBImageInputBridge } from 'jb-image-input/types';
 export {JBImageInputConfig, JBImageInputBridge };
 
-import { useEvent } from '../../custom-hooks/UseEvent';
+import { useEvent } from '../../../common/hooks/use-event';
 // eslint-disable-next-line react/display-name
 
 
