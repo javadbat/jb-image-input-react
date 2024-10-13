@@ -1,6 +1,7 @@
 {
   "name": "jb-image-input-react",
   "description": "react image input component",
+  "type": "module",
   "author": {
 		"name": "mohammad javad bathaei",
 		"email": "javadbat@gmail.com"
