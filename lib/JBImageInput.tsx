@@ -17,6 +17,7 @@ declare global {
         interface JBImageInputType extends React.DetailedHTMLProps<React.HTMLAttributes<JBImageInputWebComponent<TValue>>, JBImageInputWebComponent<TValue>> {
             class?: string,
             label?: string,
+            message?: string,
             name?: string,
             required?: string | boolean,
             // ref:React.RefObject<JBDateInputWebComponent>,
@@ -94,7 +95,7 @@ export const JBImageInput = React.forwardRef<TValue>((props: JBImageInputProps<T
   useEvent(element.current, 'imageSelected', onImageSelected);
   useEvent(element.current, 'maxSizeExceed', onMaxSizeExceed);
   return (
-    <jb-image-input ref={element} class={props.className || ''} placeholder-title={props.placeholderTitle} upload-type={props.uploadType || 'AUTO'} required={props.required} name={props.name}>
+    <jb-image-input ref={element} class={props.className || ''} placeholder-title={props.placeholderTitle} upload-type={props.uploadType || 'AUTO'} required={props.required} name={props.name} message={props.message||""}>
       {props.children}
     </jb-image-input>
   );
@@ -104,6 +105,7 @@ export type JBImageInputEventType<T,TValue> = T & {
 }
 type JBImageInputProps<TValue> = {
     className?: string,
+    message?:string,
     placeholderTitle?: string,
     required?: boolean,
     config?: JBImageInputConfig,

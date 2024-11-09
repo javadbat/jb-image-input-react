@@ -32,8 +32,21 @@ import {JBImageInput} from 'jb-image-input-react';
 
 ### check validation
 
-you can check is image input value meet your validation standard by `dom.triggerInputValidation(showError)`
-the `showError` parameter is optional and its default is true but you cant set it false so if value is invalid component don't react and show error to user and just return validation object
+jb-image-input use [jb-validation](https://github.com/javadbat/jb-validation) inside to handle validation. so for more information you can read [jb-validation](https://github.com/javadbat/jb-validation) documentation.
+by set `required` and `maxFileSize` you can easily have these 2 validation but for more advanced validation functions you can provide your own validation function list
+
+```jsx
+const validationList = [
+        {
+            validator: ({file})=>{return file.size < 500 * 1024},
+            message: 'your file size must be above 500KB'
+        },
+    ];
+    <JBImageInput ref={imageRef} validationList={validationList}/>
+//check and show validations by simple calling the function (pass false if you dont want to show error and just want to check silently)
+const result = imageRef.current.validation.checkValidation(true);
+
+```
 
 ### multi image selector
 
@@ -42,7 +55,7 @@ we have 4 step to help you implement multi image input
 
 1- set `multiple` attribute to dom to let user select multiple image
 
-```JSX
+```jsx
 <JBImageInput multiple="true"/>
 ```
 
@@ -172,3 +185,11 @@ if you want to set a custom style to this web-component all you need is to set c
 | --jb-image-input-placeholder-p-color  | web-component placeholder icon primary color                                                   |
 | --jb-image-input-placeholder-bg-color | web-component placeholder background-color default is transparent                              |
 | --jb-image-input-placeholder-sec-color| placeholder secondary color                                                                   |
+
+## Other Related Docs:
+
+- see [jb-image-input](https://github.com/javadbat/jb-image-input-react) if you want to use this component as a web-component.
+
+- see [All JB Design system Component List](https://github.com/javadbat/design-system/blob/master/docs/component-list.md) for more components.
+
+- use [Contribution Guide](https://github.com/javadbat/design-system/blob/master/docs/contribution-guide.md) if you want to contribute in this component.

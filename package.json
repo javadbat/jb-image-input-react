@@ -15,7 +15,7 @@
     "image selector",
     "react"
   ],
-  "version": "0.2.0",
+  "version": "0.3.0",
   "bugs": "https://github.com/javadbat/jb-image-input-react-react/issues",
   "license": "MIT",
   "files": [
@@ -34,6 +34,6 @@
 		"url": "git@github.com:javadbat/jb-image-input-react.git"
   },
   "dependencies": {
-    "jb-image-input":">=2.0.2"
+    "jb-image-input":">=3.0.0"
   }
 }
