@@ -26,7 +26,7 @@ declare global {
 }
 //TODO: refactor this after react remove forward ref
 type TValue = any;
-export const JBImageInput = React.forwardRef<TValue>((props: JBImageInputProps<TValue>, ref) => {
+export const JBImageInput = React.forwardRef((props: JBImageInputProps<TValue>, ref) => {
   const element = useRef<JBImageInputWebComponent<TValue>>(null);
   const [refChangeCount, refChangeCountSetter] = useState(0);
   useImperativeHandle(
@@ -95,7 +95,7 @@ export const JBImageInput = React.forwardRef<TValue>((props: JBImageInputProps<T
   useEvent(element.current, 'imageSelected', onImageSelected);
   useEvent(element.current, 'maxSizeExceed', onMaxSizeExceed);
   return (
-    <jb-image-input ref={element} class={props.className || ''} placeholder-title={props.placeholderTitle} upload-type={props.uploadType || 'AUTO'} required={props.required} name={props.name} message={props.message||""}>
+    <jb-image-input ref={element} class={props.className || ''} label={props.label} upload-type={props.uploadType || 'AUTO'} required={props.required} name={props.name} message={props.message||""}>
       {props.children}
     </jb-image-input>
   );
@@ -106,7 +106,7 @@ export type JBImageInputEventType<T,TValue> = T & {
 type JBImageInputProps<TValue> = {
     className?: string,
     message?:string,
-    placeholderTitle?: string,
+    label?: string,
     required?: boolean,
     config?: JBImageInputConfig,
     value?: any,

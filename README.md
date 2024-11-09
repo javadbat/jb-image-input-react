@@ -12,7 +12,7 @@ this package use jb-image-input underneath so you can
 
 - customizable format
 
-sample: <https://codepen.io/javadbat/pen/XWpoEYY>
+Demo :  Demo: [codeSandbox preview](https://3f63dj.csb.app/samples/jb-image-input) for just see the demo and [codeSandbox editor](https://codesandbox.io/p/sandbox/jb-design-system-3f63dj?file=%2Fsrc%2Fsamples%2FJBImageInput.tsx) if you want to see and play with code
 
 ## instruction
 
