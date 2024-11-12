@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState, useImperativeHandle } from 'react';
 import 'jb-image-input';
 // eslint-disable-next-line no-duplicate-imports
-import { JBImageInputWebComponent, type JBImageInputBridge, type JBImageInputConfig } from 'jb-image-input';
-export { JBImageInputConfig, JBImageInputBridge };
+import {JBImageInputWebComponent } from 'jb-image-input';
+import type {JBImageInputConfig, JBImageInputBridge } from 'jb-image-input/types.js';
+export {JBImageInputConfig, JBImageInputBridge };
 
 import { useEvent } from '../../../common/hooks/use-event.js';
 // eslint-disable-next-line react/display-name
