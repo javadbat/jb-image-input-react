@@ -1,4 +1,8 @@
 # jb-image-input-react
+
+> [!WARNING]  
+> this package is deprecated and moved to [jb-image-input/react](https://github.com/javadbat/jb-image-input/tree/main/react)
+
 image input react component let user upload image and see what is uploaded
 this package use jb-image-input underneath so you can 
 
